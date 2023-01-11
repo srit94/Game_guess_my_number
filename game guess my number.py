@@ -7,12 +7,10 @@ randInteger = random.randrange(1, 1000)
 print("Fertig. Ich habe mir eine Zahl zwischen 1 - 1000 überlegt")
 print("Sie können das Spiel jederzeit mit der Eingabe '0' beenden.")
 
-guessedNumber = -1
 tries = 0
 
-while randInteger != guessedNumber:
-    guessedNumber = int( input("Errate die Zahl: ") )
-
+#Zuweisungsausdruck: guessedNumber := int( input("Errate die Zahl: ") der Wert wird gleichzeitig zugewiesen.
+while randInteger != (guessedNumber := int( input("Errate die Zahl: ") )):
     #stop the game
     if guessedNumber == 0:
         print("Das Spiel wird abgebrochen")
